@@ -1,7 +1,7 @@
 # Introduction
 
-Hey! I'm Thaddeus and wanted to learn some bioinformatics/catch up on Python so uploading the answers for rosalind here.
+Hey! I'm Thaddeus and wanted to learn some bioinformatics/catch up on Python so uploading the answers for rosalind here. <br>
 
-Currently, rosalind won't activate my account so I mostly post the answers with just a console.
+** Here is my Rosalind Account: https://rosalind.info/users/tal2151/ ** <br>
 
-I will try to comment each code to get an idea of how it works! I warn you I may slowly go through them.
+There is comments for each of the code and explanations on why and what. <br>

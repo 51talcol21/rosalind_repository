@@ -1,4 +1,4 @@
-sample = "AAAACCCGGT"
+file = open("problem_3_revc/rosalind_revc.txt", "r")
 
 # Longer way of doing it using a switch statement and keeping original string in-place.
 def complementConvert(DNAString):
@@ -18,6 +18,6 @@ def complementConvert(DNAString):
     # Another way would be to declare key-value pair and just iterate and do a bunch of replacements
 
     # To keep it in alphabetical order, we use sort the string, then convert the resulting array to a string.
-    return "".join(sorted(complement))
+    return "".join(complement)[::-1]
 
-print(complementConvert(sample))
+print(complementConvert(file.read()))
