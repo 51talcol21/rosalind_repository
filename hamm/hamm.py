@@ -1,6 +1,10 @@
 sample1 = "GAGCCTACTAACGGGAT"
 sample2 = "CATCGTAATGACGGCCT"
 
+with open("hamm/rosalind_hamm.txt", "r") as file:
+    firstSequence = file.readline()
+    secondSequence = file.readline()
+
 # Given that both strings are the same size
 # The strategy will be to iterate over both strings with a single index and compare each character one by one.
 # Basically, the index being the numbered character in the string.
@@ -9,13 +13,14 @@ sample2 = "CATCGTAATGACGGCCT"
 def countPountMutations(s: str, t: str):
     # Declare a variable to hold number of mutations.
     mutationCount = 0
+    nucleotideTuple = ("A", "T", "C", "G")
 
     # For each number (i) in the range of 0-Length of string s
     for i in range(len(s)):
         # If each character (letter) at index i are not the same, increase counter.
         # Basically, if the letter at place one and two aren't the same, increase difference count.
-        if (s[i] != t[i]): mutationCount += 1
+        if ((s[i] != t[i]) and s[i] in nucleotideTuple and t[i] in nucleotideTuple): mutationCount += 1
 
     return mutationCount
 
-print(countPountMutations(sample1, sample2))
+print(countPountMutations(firstSequence, secondSequence))
