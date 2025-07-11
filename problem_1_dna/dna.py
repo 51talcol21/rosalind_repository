@@ -1,5 +1,3 @@
-file = open("problem_1_dna/rosalind_dna.txt", "r")
-
 def getEachNucleotide(DNAString: str):
     # Declare a dic with each nucleotide, 
     DNADic = {"A": 0, "C": 0, "G": 0, "T": 0}
@@ -15,5 +13,6 @@ def getEachNucleotide(DNAString: str):
     # To convert to the final value of 20 12 17 21, we need to take each number, convert it to a string and then join into a final string
     return " ".join(str(eachVal) for eachVal in list(DNADic.values()))
 
-print(getEachNucleotide(file.read()))
-file.close()
+if __name__ == "__main__":
+    with open("problem_1_dna/rosalind_dna.txt", "r") as file:
+        print(getEachNucleotide(file.read()))

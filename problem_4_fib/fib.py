@@ -1,15 +1,15 @@
-n = 0
-k = 0
-
-with open("problem_4_fib/rosalind_fib.txt", "r") as file:
-    nums = file.readline().split(" ")
-    n = int(nums[0])
-    k = int(nums[1])
-
-
-
 # A classic in SWE/basic CS pattern solving: Dynamic Programming.
 def dynamicRabbits(n: int, k: int):
+    """
+    Implement dynamic rabbits problem.
+
+    Parameters:
+        n: Month to stop at
+        k: Value by which breed/offspring come from.
+
+    Returns:
+        Number of rabbits at the end.
+    """
     # Instead of using recursion, we will implement dynamic programming.
     # Basically, we will do a bottom-up approach where we start with the lowest values and build our way up.
     # Like the Fibonacci Sequence, we can just use the two prior numbers to calculate the current.
@@ -30,6 +30,11 @@ def dynamicRabbits(n: int, k: int):
     # This is better than recursion as instead of calculating the prior EVERY single recursion call, we just hold it in memory (bottomUpDP)
     # If you were to do recursion, imagine a branching tree to break down each value into two.
     # It will grow exponentially and return all the way up. This way, we only need to know the prior two and basically save our work.
-    return bottomUpDP[-1]   
+    return bottomUpDP[-1]
 
-print(dynamicRabbits(n, k))
+if __name__ == "__main__":
+    with open("problem_4_fib/rosalind_fib.txt", "r") as file:
+        nums = file.readline().split(" ")
+        n = int(nums[0])
+        k = int(nums[1])
+    print(dynamicRabbits(n, k))

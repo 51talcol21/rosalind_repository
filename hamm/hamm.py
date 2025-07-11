@@ -1,10 +1,3 @@
-sample1 = "GAGCCTACTAACGGGAT"
-sample2 = "CATCGTAATGACGGCCT"
-
-with open("hamm/rosalind_hamm.txt", "r") as file:
-    firstSequence = file.readline()
-    secondSequence = file.readline()
-
 # Given that both strings are the same size
 # The strategy will be to iterate over both strings with a single index and compare each character one by one.
 # Basically, the index being the numbered character in the string.
@@ -23,4 +16,8 @@ def countPountMutations(s: str, t: str):
 
     return mutationCount
 
-print(countPountMutations(firstSequence, secondSequence))
+if __name__ == "__main__":
+    with open("hamm/rosalind_hamm.txt", "r") as file:
+        firstSequence = file.readline()
+        secondSequence = file.readline()
+        print(countPountMutations(firstSequence, secondSequence))

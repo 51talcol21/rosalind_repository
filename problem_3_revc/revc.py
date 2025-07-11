@@ -1,5 +1,3 @@
-file = open("problem_3_revc/rosalind_revc.txt", "r")
-
 # Longer way of doing it using a switch statement and keeping original string in-place.
 def complementConvert(DNAString):
     # Create blank string.
@@ -20,4 +18,6 @@ def complementConvert(DNAString):
     # To keep it in alphabetical order, we use sort the string, then convert the resulting array to a string.
     return "".join(complement)[::-1]
 
-print(complementConvert(file.read()))
+if __name__ == "__main__":
+    with open("problem_3_revc/rosalind_revc.txt", "r") as file:
+        print(complementConvert(file.read()))
